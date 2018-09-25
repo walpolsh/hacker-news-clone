@@ -13,9 +13,28 @@ const largeColumn = {
   const smallColumn = {
     width: '10%',
   }
+
+  const marginLeftMediumColumn = {
+    width: '30%',
+    marginLeft: '-12px',
+  }
   
   const Table = ({ list, onDismiss }) =>
         <div className='table'>
+            <div className='table-row'>
+                <div style={largeColumn}> 
+                    Title
+                </div>
+                <div style={marginLeftMediumColumn}> 
+                    Author
+                </div>
+                <div style={smallColumn}> 
+                    Comments
+                </div>
+                <div style={smallColumn}> 
+                    Points
+                </div>
+            </div>
           {list.map(item => 
             <div key={item.objectID} className='table-row'> 
               <span style={largeColumn}>
